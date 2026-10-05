@@ -1,99 +1,64 @@
 [gd_resource type="Resource" script_class="LevelData" load_steps=8 format=3]
 
-[ext_resource type="Script" path="res://src/game/spawning/level_data.gd" id="1_hxeo8"]
-[ext_resource type="Script" path="res://src/game/spawning/wave_data.gd" id="2_cqjbd"]
+[ext_resource type="Script" path="res://src/game/spawning/level_data.gd" id="1_mnwfy"]
+[ext_resource type="Script" path="res://src/game/spawning/wave_data.gd" id="2_663u4"]
 
-[sub_resource type="Resource" id="Resource_cgipk"]
-script = ExtResource("2_cqjbd")
+[sub_resource type="Resource" id="Resource_r5tky"]
+script = ExtResource("2_663u4")
+spawns = Array[Dictionary]([{
+"count": 3,
+"delay": 0.0,
+"enemy_id": &"enemy_01",
+"interval": 1.45
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_ahf3q"]
+script = ExtResource("2_663u4")
 spawns = Array[Dictionary]([{
 "count": 4,
 "delay": 0.0,
 "enemy_id": &"enemy_03",
 "interval": 1.45
-}, {
-"count": 3,
-"delay": 2.0,
-"enemy_id": &"enemy_02",
-"interval": 1.45
 }])
 rest_time = 2.5
 
-[sub_resource type="Resource" id="Resource_y5ird"]
-script = ExtResource("2_cqjbd")
+[sub_resource type="Resource" id="Resource_nnimb"]
+script = ExtResource("2_663u4")
 spawns = Array[Dictionary]([{
 "count": 3,
 "delay": 0.0,
-"enemy_id": &"enemy_02",
-"interval": 1.45
-}, {
-"count": 2,
-"delay": 2.0,
-"enemy_id": &"enemy_02",
-"interval": 1.45
-}, {
-"count": 3,
-"delay": 4.0,
-"enemy_id": &"enemy_01",
-"interval": 1.45
-}])
-rest_time = 2.5
-
-[sub_resource type="Resource" id="Resource_uwwis"]
-script = ExtResource("2_cqjbd")
-spawns = Array[Dictionary]([{
-"count": 2,
-"delay": 0.0,
-"enemy_id": &"enemy_01",
-"interval": 1.45
-}, {
-"count": 3,
-"delay": 2.0,
 "enemy_id": &"enemy_03",
 "interval": 1.45
 }, {
-"count": 3,
-"delay": 4.0,
+"count": 2,
+"delay": 2.0,
 "enemy_id": &"enemy_01",
-"interval": 1.45
-}, {
-"count": 1,
-"delay": 6.0,
-"enemy_id": &"enemy_03",
 "interval": 1.45
 }])
 rest_time = 2.5
 
-[sub_resource type="Resource" id="Resource_pcuck"]
-script = ExtResource("2_cqjbd")
+[sub_resource type="Resource" id="Resource_5pkh8"]
+script = ExtResource("2_663u4")
 spawns = Array[Dictionary]([{
-"count": 2,
-"delay": 0.0,
-"enemy_id": &"enemy_02",
-"interval": 1.45
-}, {
-"count": 3,
-"delay": 2.0,
-"enemy_id": &"enemy_02",
-"interval": 1.45
-}, {
 "count": 4,
-"delay": 4.0,
+"delay": 0.0,
 "enemy_id": &"enemy_02",
 "interval": 1.45
 }, {
-"count": 1,
-"delay": 6.0,
-"enemy_id": &"enemy_01",
+"count": 2,
+"delay": 2.0,
+"enemy_id": &"enemy_02",
 "interval": 1.45
 }])
 rest_time = 2.5
 
-[sub_resource type="Resource" id="Resource_j3l8r"]
-script = ExtResource("2_cqjbd")
+[sub_resource type="Resource" id="Resource_n6884"]
+script = ExtResource("2_663u4")
 spawns = Array[Dictionary]([{
 "count": 3,
 "delay": 0.0,
-"enemy_id": &"enemy_01",
+"enemy_id": &"enemy_02",
 "interval": 1.45
 }, {
 "count": 3,
@@ -101,30 +66,20 @@ spawns = Array[Dictionary]([{
 "enemy_id": &"enemy_03",
 "interval": 1.45
 }, {
-"count": 2,
-"delay": 4.0,
-"enemy_id": &"enemy_01",
-"interval": 1.45
-}, {
-"count": 2,
-"delay": 6.0,
-"enemy_id": &"enemy_03",
-"interval": 1.45
-}, {
 "count": 1,
-"delay": 8.0,
-"enemy_id": &"enemy_03",
+"delay": 4.0,
+"enemy_id": &"enemy_02",
 "interval": 1.45
 }])
 rest_time = 2.5
 
 [resource]
-script = ExtResource("1_hxeo8")
+script = ExtResource("1_mnwfy")
 level_index = 5
 mode = 0
 hp_multiplier = 1.75
 speed_multiplier = 1.08
-waves = Array[ExtResource("2_cqjbd")]([SubResource("Resource_cgipk"), SubResource("Resource_y5ird"), SubResource("Resource_uwwis"), SubResource("Resource_pcuck"), SubResource("Resource_j3l8r")])
+waves = Array[ExtResource("2_663u4")]([SubResource("Resource_r5tky"), SubResource("Resource_ahf3q"), SubResource("Resource_nnimb"), SubResource("Resource_5pkh8"), SubResource("Resource_n6884")])
 unlock_abilities = Array[StringName]([&"spikes"])
 is_boss_level = false
 coin_reward_base = 140

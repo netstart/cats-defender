@@ -10,7 +10,7 @@ tools/godot/
 build/
 
 # Android
-platform/android/build/
+android/build/
 *.keystore
 *.apk
 *.aab

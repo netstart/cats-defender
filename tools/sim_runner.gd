@@ -39,6 +39,7 @@ func _run_level(lvl: int) -> Dictionary:
 	var step := 1.0 / 30.0
 	var last_log := -1.0
 	while GameManager.state == GameManager.State.PLAYING and t < 360.0:
+		_smart_buy(game)
 		if t - last_log >= 15.0:
 			last_log = t
 			var en := get_tree().get_nodes_in_group(&"enemies")
@@ -54,7 +55,6 @@ func _run_level(lvl: int) -> Dictionary:
 				t, game._waves.current_wave(), game._waves.alive_count(), en.size(),
 				GameManager.currency, game._wall.health.hp, game._wall.health.max_hp,
 				tiers, epos])
-		game.buy_cat()
 		_merge_any(game)
 		if game._wall.health.ratio() < 0.7:
 			game.repair_wall()
@@ -77,6 +77,25 @@ func _run_level(lvl: int) -> Dictionary:
 	game.queue_free()
 	await get_tree().process_frame
 	return result
+
+## Bot de "habilidade média": prefere comprar tipo igual ao já possuído (força merges).
+func _smart_buy(game: MergeGame) -> void:
+	var counts: Dictionary = {}
+	for i in SlotGrid.COLS * SlotGrid.ROWS:
+		var c: CatTower = game._grid.get_at(i)
+		if c:
+			var k := int(c.data.id.trim_prefix("cat_").to_int())
+			counts[k] = int(counts.get(k, 0)) + (1 if c.tier < CatData.MAX_TIER else 0)
+	var best := -1
+	var best_n := 0
+	for k in counts.keys():
+		if counts[k] > best_n:
+			best = int(k)
+			best_n = int(counts[k])
+	if best > 0:
+		game.buy_cat_of_type(best - 1)
+	else:
+		game.buy_cat_of_type(randi() % maxi(1, game.level.cat_pool_size))
 
 func _count_cats(game: MergeGame) -> int:
 	var n := 0

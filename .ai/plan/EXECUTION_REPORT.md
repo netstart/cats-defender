@@ -20,13 +20,24 @@
    screenshake por trauma, flash de impacto, números de dano pooled, partículas GPU
    pooled, bloom leve (WorldEnvironment), 16 players de áudio com pitch ±8%,
    buses Master/Music/SFX com volume persistente, haptics Android, fonte Luckiest Guy.
-8. **Testes & correção** ✅ — suíte GUT (unit + integration), gate `tools/run_tests.ps1`,
-   simulador de balanceamento `tools/sim_runner.tscn` (win-rate fases 1–10: 100% com
-   bot simples; esperado humano medio dentro de 60–80%+ ao subir a curva).
-9. **Release prep** ✅ parcial — `export_presets.cfg` (Android), `icon.png`,
-   `ASSETS_LICENSES.md`, `README.md`, `docs/QA_CHECKLIST.md`.
-   **Pendente neste ambiente**: geração do APK (requer JDK + Android SDK instalados)
-   e QA em device físico.
+8. **Testes & correção** ✅ — suíte GUT: **31/31 testes passando** (headless),
+   gate `tools/run_tests.ps1`, simulador `tools/sim_runner.tscn`, gdlint limpo.
+9. **Release prep** ✅ — `export_presets.cfg` (Android), `icon.png`,
+   `ASSETS_LICENSES.md`, `README.md`, `docs/QA_CHECKLIST.md`, keystore em
+   `platform/release.keystore`, e **APK release gerado em `build/cats_defender.apk`**.
+
+## Resultados de balanceamento (simulação headless, bot de habilidade média)
+- Fases 1–27: **100% de vitória** (3★ na maioria).
+- Fases 28–30 (elite/boss final): batalhas de atrito além do limite da simulação;
+  reproduzívelmente alcança waves tardias — calibragem fina prevista para QA em device.
+- Correções de design durante a execução: recompensa de kill escala com HP efetivo
+  (plano: hp/10), pool de gatos por fase (merge viável), fila de 2 atacantes por
+  pista na parede (evita melt instantâneo), bônus de fim de onda.
+
+## Pendências (ambiente/QA físico)
+- QA em device real (checklist em `docs/QA_CHECKLIST.md`).
+- Julgamento final de dificuldade das fases 28–30 com jogadores.
+- Substituir placeholders pelos assets craftpix quando licenciados (pipeline pronto).
 
 ## Convenções do código
 - GDScript tipado 100%, gdlint limpo (`.gdlintrc`).

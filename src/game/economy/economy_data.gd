@@ -10,8 +10,8 @@ extends Resource
 ## reparo do muro: custo = wall_repair_cost_fraction * moedas_ganhas_na_wave
 @export var wall_repair_cost_fraction := 0.25
 ## cura por reparo (fração do HP máximo do muro)
-@export var wall_repair_heal_fraction := 0.15
-@export var wall_max_hp := 500.0
+@export var wall_repair_heal_fraction := 0.30
+@export var wall_max_hp := 800.0
 
 var _purchases := 0
 
