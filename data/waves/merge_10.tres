@@ -1,0 +1,266 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://src/game/spawning/level_data.gd" id="1_q2m77"]
+[ext_resource type="Script" path="res://src/game/spawning/wave_data.gd" id="2_tyj4p"]
+
+[sub_resource type="Resource" id="Resource_emr6t"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 2,
+"delay": 0.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 2.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 4.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 4,
+"delay": 6.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 1,
+"delay": 8.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_oflmn"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 3,
+"delay": 0.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 2.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 4.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 6.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 8.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_oinpe"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 3,
+"delay": 0.0,
+"enemy_id": &"enemy_04",
+"interval": 1.3
+}, {
+"count": 4,
+"delay": 2.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 4.0,
+"enemy_id": &"enemy_04",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 6.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 8.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_q3wh0"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 2,
+"delay": 0.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 2.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 4,
+"delay": 4.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 6.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 8.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 10.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_riytl"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 3,
+"delay": 0.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 2.0,
+"enemy_id": &"enemy_04",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 4.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 6.0,
+"enemy_id": &"enemy_03",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 8.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 10.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 12.0,
+"enemy_id": &"enemy_02",
+"interval": 1.3
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_mvdv7"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 2,
+"delay": 0.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 2.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 4,
+"delay": 4.0,
+"enemy_id": &"enemy_02",
+"interval": 1.3
+}, {
+"count": 4,
+"delay": 6.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 8.0,
+"enemy_id": &"enemy_04",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 10.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_fu8x8"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 2,
+"delay": 0.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 2.0,
+"enemy_id": &"enemy_04",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 4.0,
+"enemy_id": &"enemy_02",
+"interval": 1.3
+}, {
+"count": 4,
+"delay": 6.0,
+"enemy_id": &"enemy_01",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 8.0,
+"enemy_id": &"enemy_04",
+"interval": 1.3
+}, {
+"count": 3,
+"delay": 10.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}, {
+"count": 2,
+"delay": 12.0,
+"enemy_id": &"enemy_05",
+"interval": 1.3
+}])
+rest_time = 2.5
+
+[sub_resource type="Resource" id="Resource_5krgm"]
+script = ExtResource("2_tyj4p")
+spawns = Array[Dictionary]([{
+"count": 1,
+"delay": 4.0,
+"enemy_id": &"cat_guardian",
+"interval": 6.0
+}])
+rest_time = 0.0
+
+[resource]
+script = ExtResource("1_q2m77")
+level_index = 10
+mode = 0
+hp_multiplier = 3.5
+speed_multiplier = 1.18
+waves = Array[ExtResource("2_tyj4p")]([SubResource("Resource_emr6t"), SubResource("Resource_oflmn"), SubResource("Resource_oinpe"), SubResource("Resource_q3wh0"), SubResource("Resource_riytl"), SubResource("Resource_mvdv7"), SubResource("Resource_fu8x8"), SubResource("Resource_5krgm")])
+unlock_abilities = Array[StringName]([&"spikes", &"tnt"])
+is_boss_level = true
+coin_reward_base = 200
+cat_pool_size = 6

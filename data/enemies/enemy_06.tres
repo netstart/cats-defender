@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/game/enemies/enemy_data.gd" id="1_so0xp"]
+
+[resource]
+script = ExtResource("1_so0xp")
+id = &"enemy_06"
+atlas_name = "enemy_06"
+max_hp = 78.0
+move_speed = 65.0
+damage = 18.0
+attack_rate = 0.7
+attack_range = 14.0
+coin_reward = 0
+is_boss = false
+scale_mod = 1.14

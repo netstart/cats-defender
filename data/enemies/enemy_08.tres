@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/game/enemies/enemy_data.gd" id="1_a3pcu"]
+
+[resource]
+script = ExtResource("1_a3pcu")
+id = &"enemy_08"
+atlas_name = "enemy_08"
+max_hp = 98.0
+move_speed = 89.0
+damage = 22.0
+attack_rate = 0.7
+attack_range = 14.0
+coin_reward = 0
+is_boss = false
+scale_mod = 0.9

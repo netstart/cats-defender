@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EconomyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/game/economy/economy_data.gd" id="1_swsgg"]
+
+[resource]
+script = ExtResource("1_swsgg")
+initial_currency = 150
+cat_base_cost = 40
+cat_cost_increment = 10
+kill_reward_divisor = 3.0
+wall_repair_cost_fraction = 0.25
+wall_repair_heal_fraction = 0.15
+wall_max_hp = 500.0

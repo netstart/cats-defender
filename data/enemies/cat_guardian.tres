@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/game/enemies/enemy_data.gd" id="1_gpgkt"]
+
+[resource]
+script = ExtResource("1_gpgkt")
+id = &"cat_guardian"
+atlas_name = "cat_guardian"
+max_hp = 900.0
+move_speed = 34.0
+damage = 40.0
+attack_rate = 0.6
+attack_range = 26.0
+coin_reward = 300
+is_boss = true
+scale_mod = 1.6
