@@ -1,0 +1,22 @@
+# Godot 4
+.godot/
+/imported/
+.export/
+export.cfg
+export_presets.cfg
+
+# Ferramentas locais (binários grandes)
+tools/godot/
+build/
+
+# Android
+platform/android/build/
+*.keystore
+*.apk
+*.aab
+
+# SO/IDE
+.vs/
+.idea/
+*.tmp
+Thumbs.db

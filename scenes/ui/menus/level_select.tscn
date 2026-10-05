@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf0973af9facd4"]
+
+[ext_resource type="Script" path="res://src/ui/menus/level_select.gd" id="1"]
+
+[node name="LevelSelect" type="CanvasLayer"]
+script = ExtResource("1")
