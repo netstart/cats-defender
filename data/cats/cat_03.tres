@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="CatData" load_steps=3 format=3]
 
-[ext_resource type="Texture2D" path="res://assets/art/sprites/bullets/bullet_yellow.png" id="1_ywiqy"]
-[ext_resource type="Script" path="res://src/game/cats/cat_data.gd" id="2_egyc0"]
+[ext_resource type="Texture2D" path="res://assets/art/sprites/bullets/bullet_yellow.png" id="1_7rcew"]
+[ext_resource type="Script" path="res://src/game/cats/cat_data.gd" id="2_35qm8"]
 
 [resource]
-script = ExtResource("2_egyc0")
+script = ExtResource("2_35qm8")
 id = &"cat_03"
 display_name = "Gato 03"
 atlas_name = "cat_03"
-damage = 14.0
-fire_rate = 0.8
+damage = 19.0
+fire_rate = 0.9
 projectile_speed = 740.0
 range = 950.0
-bullet_texture = ExtResource("1_ywiqy")
+bullet_texture = ExtResource("1_7rcew")
 muzzle_color = Color(1, 0.85, 0.4, 1)

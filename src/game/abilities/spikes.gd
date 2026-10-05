@@ -7,10 +7,10 @@ func _init() -> void:
 	cost = 60
 	cooldown = 14.0
 
-@export var slow_factor := 0.45
-@export var slow_duration := 4.0
-@export var dot_dps := 8.0
-@export var dot_duration := 4.0
+@export var slow_factor := 0.4
+@export var slow_duration := 5.0
+@export var dot_dps := 14.0
+@export var dot_duration := 5.0
 @export var area_min_x := 0.0
 @export var area_max_x := 800.0
 

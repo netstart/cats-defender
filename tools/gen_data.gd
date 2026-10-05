@@ -30,8 +30,8 @@ func _gen_cats() -> void:
 		c.atlas_name = "cat_%02d" % i
 		c.display_name = "Gato %02d" % i
 		# variação de papel: dano vs cadência
-		c.damage = 8.0 + (i % 5) * 2.0
-		c.fire_rate = 0.8 + (i % 3) * 0.25
+		c.damage = 10.0 + (i % 5) * 3.0
+		c.fire_rate = 0.9 + (i % 3) * 0.25
 		c.projectile_speed = 560.0 + (i % 4) * 60.0
 		c.range = 950.0
 		c.bullet_texture = load(bullets[i % 3])
@@ -82,7 +82,7 @@ func _gen_levels() -> void:
 		lv.speed_multiplier = 1.0 + minf(0.6, (i - 1) * 0.02)
 		lv.is_boss_level = i == 10 or i == 30
 		lv.coin_reward_base = 80 + i * 12
-		lv.cat_pool_size = clampi(3 + i / 3, 3, 15)
+		lv.cat_pool_size = clampi(3 + i / 3, 3, 9)
 		if i >= 4:
 			lv.unlock_abilities.append(&"spikes")
 		if i >= 7:
@@ -107,10 +107,10 @@ func _hp_mult(i: int) -> float:
 		_ when i <= 6: return lerpf(1.5, 2.0, (i - 4) / 2.0)
 		_ when i <= 9: return lerpf(2.2, 3.0, (i - 7) / 2.0)
 		_ when i == 10: return 3.5
-		_ when i <= 15: return lerpf(3.8, 6.0, (i - 11) / 4.0)
-		_ when i <= 20: return lerpf(6.5, 10.0, (i - 16) / 4.0)
-		_ when i <= 29: return lerpf(11.0, 20.0, (i - 21) / 8.0)
-		_: return 25.0
+		_ when i <= 15: return lerpf(3.6, 4.6, (i - 11) / 4.0)
+		_ when i <= 20: return lerpf(4.8, 5.8, (i - 16) / 4.0)
+		_ when i <= 29: return lerpf(5.8, 6.2, (i - 21) / 8.0)
+		_: return 7.0
 
 func _waves_for(i: int) -> Array[WaveData]:
 	var result: Array[WaveData] = []
@@ -123,13 +123,15 @@ func _waves_for(i: int) -> Array[WaveData]:
 		wave_count = 6
 	elif i <= 15:
 		wave_count = 7
-	else:
+	elif i <= 21:
 		wave_count = 8
+	else:
+		wave_count = 6
 	var max_enemy := clampi(1 + (i - 1) / 2, 2, 8)
 	for w in wave_count:
 		var wave := WaveData.new()
 		wave.rest_time = 2.5
-		var budget := 2 + i + w
+		var budget := mini(2 + i / 3 + w, 10)
 		while budget > 0:
 			var enemy_id := randi_range(1, max_enemy)
 			var count := clampi(randi_range(2, 4), 1, budget)

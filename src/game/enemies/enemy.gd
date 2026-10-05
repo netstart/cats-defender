@@ -80,6 +80,8 @@ func _build(hp_mult: float) -> void:
 	_moving.stop_x = _wall_x
 
 	_state = &"walk"
+	if is_in_group(&"attackers"):
+		remove_from_group(&"attackers")
 	_attack_cooldown = 0.0
 	_dot_dps = 0.0
 	_dot_time = 0.0
@@ -124,10 +126,17 @@ func _process(delta: float) -> void:
 		if _sprite.sprite_frames.has_animation(&"attack"):
 			_sprite.play(&"attack")
 	if _state == &"walk" and global_position.x <= _wall_x + data.attack_range:
+		# até 2 atacantes simultâneos por pista; os demais aguardam (fila de melee)
+		if _attackers_in_lane() >= 2:
+			_moving.enabled = false
+			return
 		_state = &"attack"
+		add_to_group(&"attackers")
 		_moving.enabled = false
 		if _sprite.sprite_frames.has_animation(&"attack"):
 			_sprite.play(&"attack")
+	elif _state == &"walk":
+		_moving.enabled = true  # reentra em movimento se estava na fila
 	elif _state == &"attack":
 		_attack_cooldown -= delta
 		if _attack_cooldown <= 0.0:
@@ -147,11 +156,13 @@ func _on_died() -> void:
 		return
 	_state = &"dead"
 	_moving.enabled = false
+	if is_in_group(&"attackers"):
+		remove_from_group(&"attackers")
 	set_deferred(&"monitoring", false)
 	set_deferred(&"monitorable", false)
 	if is_in_group(&"enemies"):
 		remove_from_group(&"enemies")
-	var reward := data.coin_reward if data.coin_reward > 0 else maxi(1, roundi(data.max_hp / 10.0))
+	var reward := data.coin_reward if data.coin_reward > 0 else maxi(1, roundi(health.max_hp / 10.0))
 	EventBus.enemy_killed.emit(self, reward)
 	AudioManager.play_sfx_id(&"enemy_die", randf_range(0.92, 1.08))
 	if _sprite.sprite_frames.has_animation(&"dead"):
@@ -159,6 +170,15 @@ func _on_died() -> void:
 		await get_tree().create_timer(DEATH_ANIM_WAIT).timeout
 	_built = false
 	PoolManager.release(self)
+
+func _attackers_in_lane() -> int:
+	var n := 0
+	for a in get_tree().get_nodes_in_group(&"attackers"):
+		var e := a as Enemy
+		if e and e != self and not e.is_dead \
+				and absf(e.global_position.y - global_position.y) < 80.0:
+			n += 1
+	return n
 
 func _blocked_by_boxer() -> Node:
 	for b in get_tree().get_nodes_in_group(&"blockers"):

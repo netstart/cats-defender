@@ -140,7 +140,9 @@ func _hit_stop() -> void:
 	Engine.time_scale = 1.0
 
 func _on_wave_cleared(_wave: int) -> void:
-	pass
+	# bônus de fim de onda (economia: recompensa base da fase, escala com o nível)
+	GameManager.add_currency(maxi(1, level.coin_reward_base / 2))
+	_coins_earned_wave = 0
 
 func _on_all_waves_cleared() -> void:
 	var stars := _compute_stars()
@@ -160,17 +162,23 @@ func _on_game_over(victory: bool) -> void:
 	GameManager.state = GameManager.State.GAME_OVER
 	AudioManager.play_sfx_id(&"lose")
 
-## Loja: compra gato tier 1 aleatório → primeiro slot livre.
+## Loja: compra gato tier 1 aleatório (da pool da fase) → primeiro slot livre.
 func buy_cat() -> bool:
+	var pool_size := clampi(level.cat_pool_size, 1, cat_catalog.size())
+	return _buy_cat_of_type(_rng.randi() % pool_size)
+
+## Compra determinística (UI de escolha de tipo + bot da simulação).
+func buy_cat_of_type(cat_index: int) -> bool:
+	var pool_size := clampi(level.cat_pool_size, 1, cat_catalog.size())
+	return _buy_cat_of_type(clampi(cat_index, 0, pool_size - 1))
+
+func _buy_cat_of_type(cat_index: int) -> bool:
 	var cost := economy.next_cat_cost()
 	var slot := _grid.free_slot()
-	if slot < 0:
+	if slot < 0 or not GameManager.try_spend(cost):
 		return false
-	if not GameManager.try_spend(cost):
-		return false
-	var pool_size := clampi(level.cat_pool_size, 1, cat_catalog.size())
 	var cat := CatTower.new()
-	cat.setup(cat_catalog[_rng.randi() % pool_size])
+	cat.setup(cat_catalog[cat_index])
 	if not _grid.place(cat, slot):
 		GameManager.add_currency(cost)
 		cat.queue_free()

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://src/game/enemies/enemy_data.gd" id="1_a3pcu"]
+[ext_resource type="Script" path="res://src/game/enemies/enemy_data.gd" id="1_ho6a1"]
 
 [resource]
-script = ExtResource("1_a3pcu")
+script = ExtResource("1_ho6a1")
 id = &"enemy_08"
 atlas_name = "enemy_08"
 max_hp = 98.0
