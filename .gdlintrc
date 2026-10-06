@@ -1,7 +1,0 @@
-# gdtoolkit linter config
-disable:
-  - max-line-length
-  - max-returns
-  - class-definitions-order
-format:
-  indent_size: 1
