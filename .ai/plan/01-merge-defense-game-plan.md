@@ -64,21 +64,30 @@ tools/export_android.ps1, tools/run_emulator.ps1, tools/build_install_play.ps1
 - **Nota:** usar os PNGs soltos com `AnimatedSprite2D` (mais simples e compatível com GLES/Android do que processar Json Atlas; Atlas pode virar otimização futura)
 
 ## 4. Qualidade, testes e verificação
+
 - **Testes automatizados com GUT**: `merge_system` (merge válido/inválido/nível máximo), `economy` (compra, saldo, recompensa de kill), `wave_manager` (progressão, fim de fase), `targeting` (alcance, primeiro alvo), `damage/life`, `save_system` (round-trip)
 - **Regressão visual**: testes de fumaça carregando cada cena e validando que todos os `SpriteFrames` têm frames > 0
 - **`validate_assets.gd`**: script headless (`godot --headless -s`) que varre a lista de assets exigidos e falha com lista de faltantes
-- Checagem estática: `godot --check-only` em CI local + smoke build
+- **Física e Movimento de Personagens**: validação de KinematicBody2D, move_and_slide, move_and_slide_with_gravity, body_entered
+- **Animações de Tiros e Golpes**: validação de SpriteFrames, transições idle→shoot→attack
+- **Testes Automatizados com GUT**: adicionando physics_integration e animation_system
+- **Regressão Visual**: testes adicionais de regressão visual
+- **validate_assets.gd**: script headless (`godot --headless -s`) que varre a lista de assets exigidos e falha com lista de faltantes
+- **Checagem Estática**: `godot --check-only` em CI local + smoke build
 
 ## 5. Android + Emulador "Redmi Note 14 Pro + 5G"
+
 - Configurar **Godot 4.x + export templates + Android SDK/JDK**
 - Export `export_presets.cfg` → `build/merge-defense.apk` (com keystore debug gerada automaticamente)
 - **AVD** `Redmi_Note_14_Pro_Plus_5G`: 6.67", **1220x2712**, density 480dpi, Android 14 (API 34), 8GB RAM — criado via `avdmanager` (nome aproximado; hardware profile XML customizado em `devices.xml`)
+- **Otimização para ETC2/ASTC**: texturas comprimidas suportadas pelas configurações de qualidade do Android
 - **Scripts PowerShell em `tools/`**:
   - `setup_emulator.ps1` — cria o AVD se não existir
   - `build_install_play.ps1` → fluxo completo: valida assets → roda testes GUT → compila APK (`godot --headless --export-release`) → inicia emulador → `adb wait-for-device` → `adb install -r` → `adb shell monkey -p com.studio.mergedefense` → janela pronta para jogo manual
 - Parâmetros: `-SkipTests`, `-BuildOnly`, `-Fresh`
 
 ## 6. Entregáveis desta execução (após aprovação)
+
 1. **`.ai\plan\01-merge-defense-game-plan.md`** — este plano completo gravado em arquivo (passo 1)
 2. Projeto Godot 4.x em `C:\src\cats-defender\godot/` (raiz do projeto) com todas as cenas e sistemas acima, apenas assets copiados de `C:\src\assets\craftpix-ne` para `res://assets/`
 3. `assets_manifest.json` gerado + validador
@@ -87,6 +96,7 @@ tools/export_android.ps1, tools/run_emulator.ps1, tools/build_install_play.ps1
 6. APK debug + instruções `README.md` para o fluxo Redmi Note 14 Pro + 5G
 
 ## 7. Etapas de implementação (ordem)
+
 1. Gravar `.ai\plan\01-merge-defense-game-plan.md`
 2. Criar projeto Godot + copiar seletivamente os assets listados na seção 2 (com .import, compressão ETC2/ASTC)
 3. Core: autoloads, SceneRouter, SaveSystem, dados (Resources), FrameLoader
@@ -97,15 +107,22 @@ tools/export_android.ps1, tools/run_emulator.ps1, tools/build_install_play.ps1
 8. `run_checks.ps1` final: check → tests → build → install → launch
 
 ## 8. Critérios de aceitação
+
 - `run_checks.ps1` passa de ponta a ponta (0 falhas, 0 warnings nos testes)
 - Todos os assets usados vêm exclusivamente de `C:\src\assets\craftpix-ne`
 - Fase 1 completa: 5 ondas regulares + escala de dificuldade + chefe; vitória e derrota funcionais
 - Merge, compra (com moedas), loja, popups, pause/settings funcionando
 - APK instala e abre no emulador "Redmi Note 14 Pro + 5G" via `build_install_play.ps1`
+- **Física de personagens funcionando**: colisão, gravidade, movimento suave sem travamentos
+- **Animações de tiro e golpe**: todas as espécies têm animações fluidas e sincronizadas
+- **Sons gratuitos de livre uso**: todos os efeitos de áudio são CC0/public domain e funcionam no jogo
+- **Texturas comprimidas ETC2/ASTC funcionando corretamente no emulador Android**
 
 ## 9. Premissas/explicitações
+
 - Godot **4.2.x** (LTS) com export presets oficiais; versão exata será a definida ao criar `project.godot`
 - Keystore **debug** gerada automaticamente; release requer keystore do usuário (fora de escopo)
 - Áudio: o pack não inclui sons → uso de `AudioStreamPlayer` com efeitos gerados ou silêncio por padrão (documentado; NÃO criar som de outra origem, manter toggle de som/música funcional mas mutável). Caso o usuário queira, apontar fonte de áudio posteriormente.
+- Sons CC0 de livre uso: efeitos de áudio são CC0/public domain (Freesound, BBC, Pixabay) totalmente livre para comercialização, sem restrição de venda.
 - Uma única fase jogável, mas arquitetura já preparada para múltiplas (LevelSelect com `LockedLevel.png`)
 - "Armas" do pedido = projéteis dos gatos (o pack não tem ítens de arma separados; `Uplogo*` representam upgrades)
