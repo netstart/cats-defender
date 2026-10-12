@@ -1,6 +1,8 @@
 extends Control
 ## Splash → Menu (LandingScreen + Logo).
 
+var _advanced := false  ## evita duplo avanço (botão hit-area + fallback _input)
+
 func _ready() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
 	# Background
@@ -53,6 +55,12 @@ func _input(event: InputEvent) -> void:
 		_next()
 
 func _next() -> void:
+	# Guarda contra disparo duplo: o toque aciona tanto o pressed do botão
+	# hit-area quanto o fallback _input; sem isso, o segundo goto_app faria
+	# MENU -> MENU, uma transição inválida rejeitada pela state machine (M17).
+	if _advanced:
+		return
+	_advanced = true
 	AudioManager.play_ui("click")
 	GameState.goto_app(GameState.AppState.MENU)
 	SceneRouter.goto("res://scenes/main_menu.tscn")
