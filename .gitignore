@@ -25,4 +25,6 @@ android/build/
 Thumbs.db
 __MACOSX/
 
+godot-bin
+godot-bin/
 godot-bin/*
