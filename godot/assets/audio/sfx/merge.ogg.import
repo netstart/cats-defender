@@ -3,12 +3,11 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dq5s1lngnpnc8"
-path="res://.godot/imported/merge.ogg-7d5bb95262a67e50c0b72c409adba5c2.oggvorbisstr"
+valid=false
 
 [deps]
 
 source_file="res://assets/audio/sfx/merge.ogg"
-dest_files=["res://.godot/imported/merge.ogg-7d5bb95262a67e50c0b72c409adba5c2.oggvorbisstr"]
 
 [params]
 

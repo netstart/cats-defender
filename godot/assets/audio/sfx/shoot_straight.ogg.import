@@ -3,12 +3,11 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ddxvvki038gn3"
-path="res://.godot/imported/shoot_straight.ogg-214e5093fe959ac3445d55fd518d8bec.oggvorbisstr"
+valid=false
 
 [deps]
 
 source_file="res://assets/audio/sfx/shoot_straight.ogg"
-dest_files=["res://.godot/imported/shoot_straight.ogg-214e5093fe959ac3445d55fd518d8bec.oggvorbisstr"]
 
 [params]
 

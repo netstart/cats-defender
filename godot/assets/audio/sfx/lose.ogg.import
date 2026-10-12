@@ -3,12 +3,11 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bw3q36skwk7m8"
-path="res://.godot/imported/lose.ogg-0d477e5c9fa73baf8719de7f821b32ec.oggvorbisstr"
+valid=false
 
 [deps]
 
 source_file="res://assets/audio/sfx/lose.ogg"
-dest_files=["res://.godot/imported/lose.ogg-0d477e5c9fa73baf8719de7f821b32ec.oggvorbisstr"]
 
 [params]
 
