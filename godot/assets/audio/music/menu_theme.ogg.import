@@ -3,12 +3,11 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://ge3cd6hmef55"
-path="res://.godot/imported/menu_theme.ogg-4773ce2ecfb62bcf6999bb483d084cb0.oggvorbisstr"
+valid=false
 
 [deps]
 
 source_file="res://assets/audio/music/menu_theme.ogg"
-dest_files=["res://.godot/imported/menu_theme.ogg-4773ce2ecfb62bcf6999bb483d084cb0.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,11 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b22hlkq65vo2c"
-path="res://.godot/imported/boss_alert.ogg-7f74f4ab9dd31a113e1e24a8ea6ff607.oggvorbisstr"
+valid=false
 
 [deps]
 
 source_file="res://assets/audio/sfx/boss_alert.ogg"
-dest_files=["res://.godot/imported/boss_alert.ogg-7f74f4ab9dd31a113e1e24a8ea6ff607.oggvorbisstr"]
 
 [params]
 

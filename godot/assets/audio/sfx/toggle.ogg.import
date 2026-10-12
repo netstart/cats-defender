@@ -3,12 +3,11 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://7u47cgexrx8g"
-path="res://.godot/imported/toggle.ogg-63493ad909afa876454c04e590c9a12b.oggvorbisstr"
+valid=false
 
 [deps]
 
 source_file="res://assets/audio/sfx/toggle.ogg"
-dest_files=["res://.godot/imported/toggle.ogg-63493ad909afa876454c04e590c9a12b.oggvorbisstr"]
 
 [params]
 

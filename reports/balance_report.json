@@ -1,0 +1,43 @@
+{
+  "bots": {
+    "idle": {
+      "avg_spent": 0,
+      "avg_stars": 0,
+      "defeat_wave_hist": {
+        "0": 30
+      },
+      "max_tier": 0,
+      "win_rate": 0
+    },
+    "medium": {
+      "avg_spent": 459,
+      "avg_stars": 3,
+      "defeat_wave_hist": {
+
+      },
+      "max_tier": 5,
+      "win_rate": 1
+    },
+    "optimal": {
+      "avg_spent": 305,
+      "avg_stars": 3,
+      "defeat_wave_hist": {
+
+      },
+      "max_tier": 7,
+      "win_rate": 1
+    },
+    "passive": {
+      "avg_spent": 0,
+      "avg_stars": 0,
+      "defeat_wave_hist": {
+        "0": 30
+      },
+      "max_tier": 0,
+      "win_rate": 0
+    }
+  },
+  "seeds": 30,
+  "stage": "P1",
+  "started_at": "2026-10-12T16:54:07"
+}

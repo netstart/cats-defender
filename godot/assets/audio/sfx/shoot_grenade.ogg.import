@@ -3,12 +3,11 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b61mwngnky115"
-path="res://.godot/imported/shoot_grenade.ogg-65e9f5520a99f4ad04a8bf8c892e62e8.oggvorbisstr"
+valid=false
 
 [deps]
 
 source_file="res://assets/audio/sfx/shoot_grenade.ogg"
-dest_files=["res://.godot/imported/shoot_grenade.ogg-65e9f5520a99f4ad04a8bf8c892e62e8.oggvorbisstr"]
 
 [params]
 

@@ -52,15 +52,26 @@ func _read_json(path: String) -> Dictionary:
 	if typeof(parsed) != TYPE_DICTIONARY:
 		return {}
 	var d: Dictionary = parsed
+	# Compatibilidade com saves antigos (v1) que não trazem checksum.
+	if not d.has("checksum"):
+		if d.has("version"):
+			push_warning("SaveSystem: save sem checksum em " + path + " (legado); aceitando")
+			return d
+		push_warning("SaveSystem: checksum ausente em " + path)
+		return {}
 	if int(d.get("checksum", -1)) != _checksum_of(d):
 		push_warning("SaveSystem: checksum inválido em " + path)
 		return {}
 	return d
 
 func _checksum_of(d: Dictionary) -> int:
+	## Hash determinístico e estável entre execuções. Godot.hash() usa um seed
+	## aleatório por execução (HashSeed), portanto nunca serviria como checksum
+	## persistente; derivamos o valor de uma string canônica via MD5.
 	var copy := d.duplicate(true)
 	copy.erase("checksum")
-	return copy.hash()
+	copy.erase("version")  # version é normalizado no load; fora do hash p/ estabilidade
+	return JSON.stringify(copy).md5_text().hash()
 
 func save_profile() -> void:
 	profile["version"] = SAVE_VERSION
