@@ -1,0 +1,358 @@
+﻿{
+    "credits_title":  {
+                          "pt_BR":  "Créditos",
+                          "en":  "Credits"
+                      },
+    "stage_A4_B3":  {
+                        "pt_BR":  "A4-B3 Horda",
+                        "en":  "A4-B3 Horde"
+                    },
+    "stage_P4":  {
+                     "pt_BR":  "P4 - Estrada da evacuação",
+                     "en":  "P4 - Evacuation road"
+                 },
+    "ui_exit":  {
+                    "pt_BR":  "Sair",
+                    "en":  "Exit"
+                },
+    "credits_source":  {
+                           "pt_BR":  "Origem",
+                           "en":  "Source"
+                       },
+    "addon_swift_shot":  {
+                             "pt_BR":  "Projétil Veloz",
+                             "en":  "Swift Shot"
+                         },
+    "menu_settings":  {
+                          "pt_BR":  "Configurações",
+                          "en":  "Settings"
+                      },
+    "ui_restart":  {
+                       "pt_BR":  "Reiniciar",
+                       "en":  "Restart"
+                   },
+    "settings_title":  {
+                           "pt_BR":  "Configurações",
+                           "en":  "Settings"
+                       },
+    "addon_refund":  {
+                         "pt_BR":  "Recuperação",
+                         "en":  "Refund"
+                     },
+    "stage_A3_B2":  {
+                        "pt_BR":  "A3-B2 Reforços",
+                        "en":  "A3-B2 Supplies"
+                    },
+    "shop_buy_level":  {
+                           "pt_BR":  "+1 nível de compra",
+                           "en":  "+1 buy level"
+                       },
+    "addon_long_scope":  {
+                             "pt_BR":  "Mira Longa",
+                             "en":  "Long Scope"
+                         },
+    "stage_P2":  {
+                     "pt_BR":  "P2 - Ruas interditadas",
+                     "en":  "P2 - Blocked streets"
+                 },
+    "addon_long_scope_desc":  {
+                                  "pt_BR":  "+30% de alcance",
+                                  "en":  "+30% range"
+                              },
+    "credits_license":  {
+                            "pt_BR":  "Licença",
+                            "en":  "License"
+                        },
+    "tutorial_step_buy":  {
+                              "pt_BR":  "Toque em Comprar para chamar um gato",
+                              "en":  "Tap Buy to summon a cat"
+                          },
+    "stage_A1_B1":  {
+                        "pt_BR":  "A1-B1 Cerco",
+                        "en":  "A1-B1 Siege"
+                    },
+    "menu_addons":  {
+                        "pt_BR":  "Addons",
+                        "en":  "Addons"
+                    },
+    "menu_credits":  {
+                         "pt_BR":  "Créditos",
+                         "en":  "Credits"
+                     },
+    "ui_replay":  {
+                      "pt_BR":  "Jogar de novo",
+                      "en":  "Play again"
+                  },
+    "addon_bounty":  {
+                         "pt_BR":  "Recompensa",
+                         "en":  "Bounty"
+                     },
+    "shop_coins_l":  {
+                         "pt_BR":  "Baú de moedas (900)",
+                         "en":  "Coin chest (900)"
+                     },
+    "set_text_scale":  {
+                           "pt_BR":  "Tamanho do texto",
+                           "en":  "Text size"
+                       },
+    "tutorial_step_merge":  {
+                                "pt_BR":  "Arraste um gato sobre outro igual para mesclar",
+                                "en":  "Drag a cat over an equal one to merge"
+                            },
+    "shop_melee_g":  {
+                         "pt_BR":  "Desbloquear Guardian",
+                         "en":  "Unlock Guardian"
+                     },
+    "ui_keep_effects":  {
+                            "pt_BR":  "Alternar efeitos reduzidos",
+                            "en":  "Toggle reduce FX"
+                        },
+    "ui_wave":  {
+                    "pt_BR":  "Onda",
+                    "en":  "Wave"
+                },
+    "addon_swift_shot_desc":  {
+                                  "pt_BR":  "+35% velocidade do projétil",
+                                  "en":  "+35% bullet speed"
+                              },
+    "stage_A2_B1":  {
+                        "pt_BR":  "A2-B1 Cerco",
+                        "en":  "A2-B1 Siege"
+                    },
+    "splash_tap":  {
+                       "pt_BR":  "Toque para começar",
+                       "en":  "Tap to start"
+                   },
+    "stage_A2_B2":  {
+                        "pt_BR":  "A2-B2 Feira",
+                        "en":  "A2-B2 Fair"
+                    },
+    "set_sound":  {
+                      "pt_BR":  "Som",
+                      "en":  "Sound"
+                  },
+    "addon_title":  {
+                        "pt_BR":  "Addons",
+                        "en":  "Addons"
+                    },
+    "addon_bounty_desc":  {
+                              "pt_BR":  "+2 moedas por abate",
+                              "en":  "+2 coins per kill"
+                          },
+    "stage_A1_B3":  {
+                        "pt_BR":  "A1-B3 Horda",
+                        "en":  "A1-B3 Horde"
+                    },
+    "addon_guardian_desc":  {
+                                "pt_BR":  "-15% dano de cerco na base",
+                                "en":  "-15% siege damage to base"
+                            },
+    "lose_title":  {
+                       "pt_BR":  "Derrota...",
+                       "en":  "Defeat..."
+                   },
+    "menu_shop":  {
+                      "pt_BR":  "Loja",
+                      "en":  "Shop"
+                  },
+    "addon_rapid_desc":  {
+                             "pt_BR":  "+30% de cadência",
+                             "en":  "+30% fire rate"
+                         },
+    "stage_A4_B1":  {
+                        "pt_BR":  "A4-B1 Cerco",
+                        "en":  "A4-B1 Siege"
+                    },
+    "select_title":  {
+                         "pt_BR":  "Escolha a fase",
+                         "en":  "Choose a stage"
+                     },
+    "upgrade_title":  {
+                          "pt_BR":  "Oficina de Gatos",
+                          "en":  "Cat Workshop"
+                      },
+    "tutorial_step_start":  {
+                                "pt_BR":  "Toque em Iniciar Onda! para ganhar bônus",
+                                "en":  "Tap Start Wave! for a bonus"
+                            },
+    "addon_guardian":  {
+                           "pt_BR":  "Guardião",
+                           "en":  "Guardian"
+                       },
+    "addon_frost":  {
+                        "pt_BR":  "Gélido",
+                        "en":  "Frost"
+                    },
+    "win_title":  {
+                      "pt_BR":  "Vitória!",
+                      "en":  "Victory!"
+                  },
+    "stage_A3_B1":  {
+                        "pt_BR":  "A3-B1 Cerco",
+                        "en":  "A3-B1 Siege"
+                    },
+    "shop_title":  {
+                       "pt_BR":  "Loja",
+                       "en":  "Shop"
+                   },
+    "shop_melee_b":  {
+                         "pt_BR":  "Desbloquear Boxing",
+                         "en":  "Unlock Boxing"
+                     },
+    "ui_continue":  {
+                        "pt_BR":  "Continuar",
+                        "en":  "Continue"
+                    },
+    "stage_P3":  {
+                     "pt_BR":  "P3 - Cemitério da névoa",
+                     "en":  "P3 - Misty graveyard"
+                 },
+    "err_no_coins":  {
+                         "pt_BR":  "Moedas insuficientes!",
+                         "en":  "Not enough coins!"
+                     },
+    "stage_A2_B3":  {
+                        "pt_BR":  "A2-B3 Horda",
+                        "en":  "A2-B3 Horde"
+                    },
+    "addon_frost_desc":  {
+                             "pt_BR":  "Slow de 35% por 1,5 s",
+                             "en":  "35% slow for 1.5 s"
+                         },
+    "ui_retry":  {
+                     "pt_BR":  "Tentar de novo",
+                     "en":  "Try again"
+                 },
+    "shop_slots":  {
+                       "pt_BR":  "+1 slot no board",
+                       "en":  "+1 board slot"
+                   },
+    "stage_A1_B2":  {
+                        "pt_BR":  "A1-B2 Reforços",
+                        "en":  "A1-B2 Supplies"
+                    },
+    "stage_A5_B3":  {
+                        "pt_BR":  "A5-B3 Horda final",
+                        "en":  "A5-B3 Final horde"
+                    },
+    "ui_start_wave":  {
+                          "pt_BR":  "Iniciar Onda!",
+                          "en":  "Start Wave!"
+                      },
+    "err_merge_level":  {
+                            "pt_BR":  "Merge requer mesmo nível",
+                            "en":  "Merge needs same level"
+                        },
+    "splash_tagline":  {
+                           "pt_BR":  "A noite caiu. Os gatos ficaram de guarda.",
+                           "en":  "Night fell. The cats stand guard."
+                       },
+    "intro_skip":  {
+                       "pt_BR":  "Toque para pular",
+                       "en":  "Tap to skip"
+                   },
+    "ui_sell_zone":  {
+                         "pt_BR":  "VENDER (arraste aqui)",
+                         "en":  "SELL (drag here)"
+                     },
+    "set_vibration":  {
+                          "pt_BR":  "Vibração",
+                          "en":  "Vibration"
+                      },
+    "menu_upgrade":  {
+                         "pt_BR":  "Oficina de Gatos",
+                         "en":  "Cat Workshop"
+                     },
+    "stage_A4_B2":  {
+                        "pt_BR":  "A4-B2 Reforços",
+                        "en":  "A4-B2 Supplies"
+                    },
+    "shop_boost":  {
+                       "pt_BR":  "Boost de moedas (+150)",
+                       "en":  "Coin boost (+150)"
+                   },
+    "ui_buy":  {
+                   "pt_BR":  "Comprar Gato",
+                   "en":  "Buy Cat"
+               },
+    "shop_coins_s":  {
+                         "pt_BR":  "Pacote de moedas (300)",
+                         "en":  "Coin pack (300)"
+                     },
+    "addon_rapid":  {
+                        "pt_BR":  "Tiro Rápido",
+                        "en":  "Rapid Fire"
+                    },
+    "set_language":  {
+                         "pt_BR":  "Idioma",
+                         "en":  "Language"
+                     },
+    "set_reduce_fx":  {
+                          "pt_BR":  "Reduzir efeitos",
+                          "en":  "Reduce effects"
+                      },
+    "ui_resume":  {
+                      "pt_BR":  "Continuar",
+                      "en":  "Resume"
+                  },
+    "addon_overload_desc":  {
+                                "pt_BR":  "+30% de dano",
+                                "en":  "+30% damage"
+                            },
+    "addon_unlocked":  {
+                           "pt_BR":  "Desbloqueado",
+                           "en":  "Unlocked"
+                       },
+    "stage_A3_B3":  {
+                        "pt_BR":  "A3-B3 Horda",
+                        "en":  "A3-B3 Horde"
+                    },
+    "menu_play":  {
+                      "pt_BR":  "Jogar",
+                      "en":  "Play"
+                  },
+    "ui_back":  {
+                    "pt_BR":  "Voltar",
+                    "en":  "Back"
+                },
+    "stage_P1":  {
+                     "pt_BR":  "P1 - O primeiro sinal",
+                     "en":  "P1 - The first sign"
+                 },
+    "addon_refund_desc":  {
+                              "pt_BR":  "Venda devolve 75%",
+                              "en":  "Sell refunds 75%"
+                          },
+    "addon_overload":  {
+                           "pt_BR":  "Sobrecarga",
+                           "en":  "Overload"
+                       },
+    "ui_paused":  {
+                      "pt_BR":  "Pausado",
+                      "en":  "Paused"
+                  },
+    "set_music":  {
+                      "pt_BR":  "Música",
+                      "en":  "Music"
+                  },
+    "stage_A5_B2":  {
+                        "pt_BR":  "A5-B2 Última reserva",
+                        "en":  "A5-B2 Last reserve"
+                    },
+    "err_board_full":  {
+                           "pt_BR":  "Board cheio!",
+                           "en":  "Board is full!"
+                       },
+    "stage_P5":  {
+                     "pt_BR":  "P5 - O farol",
+                     "en":  "P5 - The lighthouse"
+                 },
+    "stage_A5_B1":  {
+                        "pt_BR":  "A5-B1 Cerco final",
+                        "en":  "A5-B1 Final siege"
+                    },
+    "err_max_level":  {
+                          "pt_BR":  "Nível máximo atingido",
+                          "en":  "Max level reached"
+                      }
+}

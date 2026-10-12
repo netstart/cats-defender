@@ -3,11 +3,14 @@
 /imported/
 .export/
 export.cfg
-export_presets.cfg
 
 # Ferramentas locais (binários grandes)
 tools/godot/
 build/
+godot-bin/*.zip
+godot-bin/templates.tpz
+reports/
+_audio_src/
 
 # Android
 android/build/
@@ -20,3 +23,4 @@ android/build/
 .idea/
 *.tmp
 Thumbs.db
+__MACOSX/
