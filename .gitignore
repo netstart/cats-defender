@@ -24,3 +24,5 @@ android/build/
 *.tmp
 Thumbs.db
 __MACOSX/
+
+godot-bin/Godot_v4.7.2-stable_win64.exe
